@@ -144,20 +144,11 @@ summary = summarize_text(
 - **ArXiv**: Scientific papers with abstracts
 - Custom preprocessing and validation splits
 
-## 🤝 Contributing
-
-We welcome contributions! Please see our [Contributing Guidelines](CONTRIBUTING.md) for details.
 
 ## 📄 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 📞 Contact
-
-**Mahmoud El-Bahnasawi**  
-- Email: mahmoud.elbahnasawi@zewailcity.edu.eg  
-- LinkedIn: [Your LinkedIn Profile]  
-- arXiv: [Your Paper Link]
 
 ## 🙏 Acknowledgments
 
