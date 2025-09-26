@@ -1,19 +1,4 @@
-# GitHub Repository Setup
-
-Great idea! Let's create a professional GitHub repository to showcase your internship work. This will be excellent for your resume and future internship applications.
-
-## Repository Name Suggestions:
-1. `graph-based-text-summarization`
-2. `pagerank-text-summarizer`
-3. `nlp-graph-summarization`
-4. `extractive-summarization-gnn`
-
-I recommend: **`graph-based-text-summarization`**
-
-## README.md Structure:
-
-```markdown
-# Graph-Based Text Summarization using PageRank and GNNs
+# Graph-Based Text Summarization using PageRank
 
 [![Python](https://img.shields.io/badge/Python-3.8%2B-blue)](https://python.org)
 [![License](https://img.shields.io/badge/License-MIT-green)](LICENSE)
@@ -133,14 +118,7 @@ summary = summarize_text(
 
 ## 🧪 Experiments
 
-### Hyperparameter Tuning
-![Hyperparameter Tuning](results/hyperparameter_tuning_results.png)
 
-### Ablation Study
-![Ablation Study](results/ablation_study_results.png)
-
-### Diversity Analysis
-![Diversity Analysis](results/diversity_pagerank_results.png)
 
 ## 📚 Datasets
 
