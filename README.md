@@ -2,7 +2,8 @@
 
 [![Python](https://img.shields.io/badge/Python-3.8%2B-blue)](https://python.org)
 [![License](https://img.shields.io/badge/License-MIT-green)](LICENSE)
-[![arXiv](https://img.shields.io/badge/arXiv-2411.xxxxx-b31b1b)](https://arxiv.org/abs/2411.xxxxx)
+[![CNN/DailyMail](https://img.shields.io/badge/Dataset-CNN%2FDailyMail-orange?logo=kaggle)](https://www.kaggle.com/datasets/gowrishankarp/newspaper-text-summarization-cnn-dailymail)
+[![ArXiv](https://img.shields.io/badge/Dataset-ArXiv-blue?logo=kaggle)](https://www.kaggle.com/datasets/Cornell-University/arxiv)
 
 A comprehensive extractive text summarization system that leverages graph algorithms (PageRank) and Graph Neural Networks to generate high-quality summaries from long documents.
 
@@ -28,20 +29,37 @@ A comprehensive extractive text summarization system that leverages graph algori
 
 ```mermaid
 graph TB
-    A[Input Text] --> B[Sentence Splitting]
-    B --> C[Embedding Generation]
-    C --> D[Graph Construction]
-    D --> E[PageRank Scoring]
-    E --> F[Summary Generation]
+    A[📄 Input Text] --> B[🔧 Preprocessing]
+    B --> C[📝 Sentence Splitting]
+    C --> D[🧠 Embedding Generation]
     
-    C --> C1[SBERT/BERT]
-    C --> C2[TF-IDF]
-    C --> C3[Bag-of-Words]
+    D --> E1[🤖 SBERT]
+    D --> E2[📊 TF-IDF] 
+    D --> E3[📦 Bag-of-Words]
+    D --> E4[⚡ BERT]
     
-    D --> D1[Sentence Nodes]
-    D --> D2[Entity Nodes]
-    D --> D3[Similarity Edges]
-    D --> D4[Entity Edges]
+    E1 --> F[🕸️ Graph Construction]
+    E2 --> F
+    E3 --> F
+    E4 --> F
+    
+    F --> G1[🔗 Sentence Nodes]
+    F --> G2[👤 Entity Nodes]
+    F --> G3[📐 Similarity Edges]
+    F --> G4[🔗 Entity Edges]
+    
+    G1 --> H[📊 PageRank Algorithm]
+    G2 --> H
+    G3 --> H
+    G4 --> H
+    
+    H --> I[🎯 Sentence Ranking]
+    I --> J[📋 Top-K Selection]
+    J --> K[✨ Final Summary]
+    
+    style A fill:#e1f5fe
+    style K fill:#c8e6c9
+    style H fill:#fff3e0
 ```
 
 ## 🛠️ Installation
