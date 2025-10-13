@@ -16,7 +16,7 @@ cd Graph-Based-Text-Summarization
 pip install -r requirements.txt
 
 # Run summarization
-python src/summarizer.py --config configs/default.json
+python src/summarizer.py
 
 # Run evaluation
 python experiments/ablation_study.py
