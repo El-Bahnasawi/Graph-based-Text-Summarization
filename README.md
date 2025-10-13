@@ -1,8 +1,8 @@
 # 🧠 Graph-Based Text Summarization Framework
 
-[![Demo](https://img.shields.io/badge/🌐_Live_Demo-Streamlit-blue?logo=streamlit)](https://graph-based-text-summarization.streamlit.app/)
-[![Dataset](https://img.shields.io/badge/📊_Dataset-Kaggle-orange?logo=kaggle)](https://www.kaggle.com/datasets/gowrishankarp/newspaper-text-summarization-cnn-dailymail)
-[![Diagrams](https://img.shields.io/badge/🧩_Diagrams-Mermaid-brightgreen?logo=markdown)](#diagrams)
+[![Demo](https://img.shields.io/badge/_Live_Demo-Streamlit-blue?logo=streamlit)](https://graph-based-text-summarization.streamlit.app/)
+[![Dataset](https://img.shields.io/badge/_Dataset-Kaggle-orange?logo=kaggle)](https://www.kaggle.com/datasets/gowrishankarp/newspaper-text-summarization-cnn-dailymail)
+[![Diagrams](https://img.shields.io/badge/_Diagrams-Mermaid-brightgreen?logo=markdown)](#diagrams)
 [![License](https://img.shields.io/badge/License-MIT-green)](./LICENSE)
 
 
