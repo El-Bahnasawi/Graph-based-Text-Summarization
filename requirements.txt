@@ -1,0 +1,31 @@
+# Core computation and data handling
+numpy
+pandas
+scipy
+
+# NLP and embeddings
+spacy
+sentence-transformers
+scikit-learn
+
+# Graphs and network operations
+networkx
+
+# Evaluation metrics
+rouge-score
+
+# Visualization and plots
+matplotlib
+seaborn
+plotly
+
+# Web app and visualization interfaces
+streamlit
+streamlit-option-menu
+
+# Utility and logging
+tqdm
+logging
+
+# Optional: GPU optimization (if using CUDA)
+torch
