@@ -107,7 +107,7 @@ The summarization pipeline follows a five-step process:
 To identify the optimal similarity threshold, we performed a systematic sweep (0.1–0.9) for each embedder: **SBERT**, **TF-IDF**, and **BoW**.
 
 <p align="center">
-  <img src="results/hyperparam_tuning/comprehensive_hyperparameter_analysis_enhanced.png" width="950">
+  <img src="results/hyperparam_tuning/comprehensive_hyperparameter_analysis_enhanced.png">
 </p>
 
 | Embedder   | Optimal Threshold | ROUGE L2-Norm | Trend                                   |
@@ -129,7 +129,7 @@ To identify the optimal similarity threshold, we performed a systematic sweep (0
 We measured the contribution of each graph component by removing specific edge types (sentence–sentence, sentence–name, name–name).
 
 <p align="center">
-  <img src="results/ablation_study/plots/ablation_study_comprehensive.png" width="850">
+  <img src="results/ablation_study/plots/ablation_study_comprehensive.png">
 </p>
 
 #### ROUGE Scores Across Configurations
