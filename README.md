@@ -106,7 +106,7 @@ The summarization pipeline follows a five-step process:
 
 To identify the optimal similarity threshold, we performed a systematic sweep (0.1–0.9) for each embedder: **SBERT**, **TF-IDF**, and **BoW**.
 
-<p>
+<p align="center">
   <img src="results/hyperparam_tuning/comprehensive_hyperparameter_analysis_enhanced.png">
 </p>
 
