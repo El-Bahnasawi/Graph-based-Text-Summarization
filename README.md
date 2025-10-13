@@ -201,10 +201,6 @@ Lightweight graphs significantly **reduce runtime** with minimal loss in summari
 
 ---
 
-*Example graph visualization showing inter-sentence relationships via cosine similarity.*
-
----
-
 ## 📜 License
 
 This project is licensed under the MIT License — see the [LICENSE](LICENSE) file for details.
