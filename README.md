@@ -107,7 +107,7 @@ The summarization pipeline follows a five-step process:
 To identify the optimal similarity threshold, we performed a systematic sweep (0.1–0.9) for each embedder: **SBERT**, **TF-IDF**, and **BoW**.
 
 <p align="center">
-  <img src="results/hyperparam_tuning/comprehensive_hyperparameter_analysis_enhanced.png" width="800">
+  <img src="results/hyperparam_tuning/comprehensive_hyperparameter_analysis_enhanced.png" width="950">
 </p>
 
 | Embedder   | Optimal Threshold | ROUGE L2-Norm | Trend                                   |
