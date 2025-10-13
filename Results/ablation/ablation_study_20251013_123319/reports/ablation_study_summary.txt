@@ -1,0 +1,31 @@
+ABLATION STUDY SUMMARY REPORT
+==================================================
+
+Generated: 2025-10-13 12:34:26
+Dataset: Datasets/cnn_dailymail/validation.csv
+Sample Size: 100
+
+RESULTS SUMMARY:
+------------------------------
+Full Model (SBERT):
+  ROUGE L2: 0.3849 | Time: 0.10s | Success: 100/100
+No Sentence-Sentence Edges:
+  ROUGE L2: 0.2891 | Time: 0.06s | Success: 100/100
+No Sentence-Name Edges:
+  ROUGE L2: 0.3849 | Time: 0.06s | Success: 100/100
+No Name-Name Edges:
+  ROUGE L2: 0.3849 | Time: 0.06s | Success: 100/100
+Only Sentence-Sentence:
+  ROUGE L2: 0.4003 | Time: 0.04s | Success: 100/100
+TF-IDF Baseline:
+  ROUGE L2: 0.3525 | Time: 0.03s | Success: 100/100
+BOW Baseline:
+  ROUGE L2: 0.3730 | Time: 0.03s | Success: 100/100
+Only Name Relationships:
+  ROUGE L2: 0.2891 | Time: 0.06s | Success: 100/100
+
+KEY FINDINGS:
+------------------------------
+Best: Only Sentence-Sentence (ROUGE L2: 0.4003)
+Worst: No Sentence-Sentence Edges (ROUGE L2: 0.2891)
+Range: 0.1112

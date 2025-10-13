@@ -1,0 +1,318 @@
+
+        <!DOCTYPE html>
+        <html>
+        <head>
+            <title>Ablation Study Report</title>
+            <style>
+                body { font-family: Arial, sans-serif; margin: 40px; }
+                h1 { color: #2c3e50; }
+                h2 { color: #34495e; border-bottom: 2px solid #bdc3c7; padding-bottom: 5px; }
+                table { border-collapse: collapse; width: 100%; margin: 20px 0; }
+                th, td { border: 1px solid #ddd; padding: 12px; text-align: left; }
+                th { background-color: #f2f2f2; }
+                tr:nth-child(even) { background-color: #f9f9f9; }
+                .best { background-color: #d4edda !important; }
+                .worst { background-color: #f8d7da !important; }
+                .metric { font-weight: bold; color: #2980b9; }
+            </style>
+        </head>
+        <body>
+            <h1>Ablation Study Report</h1>
+            <p>Generated on: 2025-10-02 18:18:33</p>
+            <p>Dataset: Datasets/cnn_dailymail/validation.csv</p>
+            <p>Sample Size: 1000</p>
+            
+            <h2>Results Summary</h2>
+            <table border="1" class="dataframe table table-striped">
+  <thead>
+    <tr style="text-align: right;">
+      <th>config_name</th>
+      <th>description</th>
+      <th>embedder</th>
+      <th>sim_threshold</th>
+      <th>use_sent_sent</th>
+      <th>use_sent_name</th>
+      <th>use_name_name</th>
+      <th>avg_rouge1</th>
+      <th>avg_rouge2</th>
+      <th>avg_rougeL</th>
+      <th>avg_rouge_l2</th>
+      <th>std_rouge1</th>
+      <th>std_rouge2</th>
+      <th>std_rougeL</th>
+      <th>std_rouge_l2</th>
+      <th>avg_time</th>
+      <th>std_time</th>
+      <th>n_articles</th>
+      <th>success_rate</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Full Model (SBERT)</td>
+      <td>Complete model with all graph components using SBERT embeddings</td>
+      <td>sbert</td>
+      <td>0.3000</td>
+      <td>True</td>
+      <td>True</td>
+      <td>True</td>
+      <td>0.3125</td>
+      <td>0.1098</td>
+      <td>0.1918</td>
+      <td>0.3875</td>
+      <td>0.1095</td>
+      <td>0.0915</td>
+      <td>0.0871</td>
+      <td>0.1559</td>
+      <td>0.0916</td>
+      <td>0.1419</td>
+      <td>1000</td>
+      <td>1.0000</td>
+    </tr>
+    <tr>
+      <td>No Sentence-Sentence Edges</td>
+      <td>Ablated: Semantic similarity relationships between sentences</td>
+      <td>sbert</td>
+      <td>0.3000</td>
+      <td>False</td>
+      <td>True</td>
+      <td>True</td>
+      <td>0.2616</td>
+      <td>0.0738</td>
+      <td>0.1596</td>
+      <td>0.3201</td>
+      <td>0.1115</td>
+      <td>0.0863</td>
+      <td>0.0859</td>
+      <td>0.1554</td>
+      <td>0.0415</td>
+      <td>0.0191</td>
+      <td>1000</td>
+      <td>1.0000</td>
+    </tr>
+    <tr>
+      <td>No Sentence-Name Edges</td>
+      <td>Ablated: Connections between sentences and named entities</td>
+      <td>sbert</td>
+      <td>0.3000</td>
+      <td>True</td>
+      <td>False</td>
+      <td>True</td>
+      <td>0.3300</td>
+      <td>0.1160</td>
+      <td>0.2034</td>
+      <td>0.4096</td>
+      <td>0.1088</td>
+      <td>0.0924</td>
+      <td>0.0861</td>
+      <td>0.1541</td>
+      <td>0.0427</td>
+      <td>0.0195</td>
+      <td>1000</td>
+      <td>1.0000</td>
+    </tr>
+    <tr>
+      <td>No Name-Name Edges</td>
+      <td>Ablated: Co-occurrence relationships between named entities</td>
+      <td>sbert</td>
+      <td>0.3000</td>
+      <td>True</td>
+      <td>True</td>
+      <td>False</td>
+      <td>0.3020</td>
+      <td>0.1028</td>
+      <td>0.1854</td>
+      <td>0.3736</td>
+      <td>0.1042</td>
+      <td>0.0866</td>
+      <td>0.0830</td>
+      <td>0.1477</td>
+      <td>0.0423</td>
+      <td>0.0189</td>
+      <td>1000</td>
+      <td>1.0000</td>
+    </tr>
+    <tr>
+      <td>Only Sentence-Sentence</td>
+      <td>Minimal graph with only semantic similarity edges</td>
+      <td>sbert</td>
+      <td>0.3000</td>
+      <td>True</td>
+      <td>False</td>
+      <td>False</td>
+      <td>0.3300</td>
+      <td>0.1160</td>
+      <td>0.2034</td>
+      <td>0.4096</td>
+      <td>0.1088</td>
+      <td>0.0924</td>
+      <td>0.0861</td>
+      <td>0.1541</td>
+      <td>0.0347</td>
+      <td>0.0179</td>
+      <td>1000</td>
+      <td>1.0000</td>
+    </tr>
+    <tr>
+      <td>TF-IDF Baseline</td>
+      <td>Complete model with TF-IDF embeddings instead of SBERT</td>
+      <td>tfidf</td>
+      <td>0.1000</td>
+      <td>True</td>
+      <td>True</td>
+      <td>True</td>
+      <td>0.2935</td>
+      <td>0.0971</td>
+      <td>0.1811</td>
+      <td>0.3631</td>
+      <td>0.1107</td>
+      <td>0.0882</td>
+      <td>0.0867</td>
+      <td>0.1551</td>
+      <td>0.0213</td>
+      <td>0.0098</td>
+      <td>1000</td>
+      <td>1.0000</td>
+    </tr>
+    <tr>
+      <td>BOW Baseline</td>
+      <td>Complete model with Bag-of-Words embeddings</td>
+      <td>bow</td>
+      <td>0.1000</td>
+      <td>True</td>
+      <td>True</td>
+      <td>True</td>
+      <td>0.2992</td>
+      <td>0.1016</td>
+      <td>0.1829</td>
+      <td>0.3695</td>
+      <td>0.1039</td>
+      <td>0.0840</td>
+      <td>0.0806</td>
+      <td>0.1454</td>
+      <td>0.0209</td>
+      <td>0.0093</td>
+      <td>1000</td>
+      <td>1.0000</td>
+    </tr>
+    <tr>
+      <td>Only Name Relationships</td>
+      <td>Graph based solely on named entity relationships</td>
+      <td>sbert</td>
+      <td>0.3000</td>
+      <td>False</td>
+      <td>True</td>
+      <td>True</td>
+      <td>0.2616</td>
+      <td>0.0738</td>
+      <td>0.1596</td>
+      <td>0.3201</td>
+      <td>0.1115</td>
+      <td>0.0863</td>
+      <td>0.0859</td>
+      <td>0.1554</td>
+      <td>0.0442</td>
+      <td>0.0217</td>
+      <td>1000</td>
+      <td>1.0000</td>
+    </tr>
+  </tbody>
+</table>
+            
+            <h2>Key Findings</h2>
+            <ul>
+                <li>Best Configuration: Only Sentence-Sentence 
+                    (ROUGE L2: 0.4096)</li>
+                <li>Worst Configuration: No Sentence-Sentence Edges 
+                    (ROUGE L2: 0.3201)</li>
+                <li>Performance Range: 0.0895</li>
+                <li>Average Processing Time: 0.04 seconds</li>
+            </ul>
+            
+            <h2>Configuration Details</h2>
+            <table>
+                <tr>
+                    <th>Configuration</th>
+                    <th>Embedder</th>
+                    <th>Sent-Sent</th>
+                    <th>Sent-Name</th>
+                    <th>Name-Name</th>
+                    <th>Description</th>
+                </tr>
+        
+                <tr>
+                    <td>Full Model (SBERT)</td>
+                    <td>sbert</td>
+                    <td>✓</td>
+                    <td>✓</td>
+                    <td>✓</td>
+                    <td>Complete model with all graph components using SBERT embeddings</td>
+                </tr>
+            
+                <tr>
+                    <td>No Sentence-Sentence Edges</td>
+                    <td>sbert</td>
+                    <td>✗</td>
+                    <td>✓</td>
+                    <td>✓</td>
+                    <td>Ablated: Semantic similarity relationships between sentences</td>
+                </tr>
+            
+                <tr>
+                    <td>No Sentence-Name Edges</td>
+                    <td>sbert</td>
+                    <td>✓</td>
+                    <td>✗</td>
+                    <td>✓</td>
+                    <td>Ablated: Connections between sentences and named entities</td>
+                </tr>
+            
+                <tr>
+                    <td>No Name-Name Edges</td>
+                    <td>sbert</td>
+                    <td>✓</td>
+                    <td>✓</td>
+                    <td>✗</td>
+                    <td>Ablated: Co-occurrence relationships between named entities</td>
+                </tr>
+            
+                <tr>
+                    <td>Only Sentence-Sentence</td>
+                    <td>sbert</td>
+                    <td>✓</td>
+                    <td>✗</td>
+                    <td>✗</td>
+                    <td>Minimal graph with only semantic similarity edges</td>
+                </tr>
+            
+                <tr>
+                    <td>TF-IDF Baseline</td>
+                    <td>tfidf</td>
+                    <td>✓</td>
+                    <td>✓</td>
+                    <td>✓</td>
+                    <td>Complete model with TF-IDF embeddings instead of SBERT</td>
+                </tr>
+            
+                <tr>
+                    <td>BOW Baseline</td>
+                    <td>bow</td>
+                    <td>✓</td>
+                    <td>✓</td>
+                    <td>✓</td>
+                    <td>Complete model with Bag-of-Words embeddings</td>
+                </tr>
+            
+                <tr>
+                    <td>Only Name Relationships</td>
+                    <td>sbert</td>
+                    <td>✗</td>
+                    <td>✓</td>
+                    <td>✓</td>
+                    <td>Graph based solely on named entity relationships</td>
+                </tr>
+            
+            </table>
+        </body>
+        </html>
+        

@@ -1,0 +1,9 @@
+config_name,description,embedder,sim_threshold,use_sent_sent,use_sent_name,use_name_name
+Full Model (SBERT),Complete model with all graph components using SBERT embeddings,sbert,0.3,True,True,True
+No Sentence-Sentence Edges,Ablated: Semantic similarity relationships between sentences,sbert,0.3,False,True,True
+No Sentence-Name Edges,Ablated: Connections between sentences and named entities,sbert,0.3,True,False,True
+No Name-Name Edges,Ablated: Co-occurrence relationships between named entities,sbert,0.3,True,True,False
+Only Sentence-Sentence,Minimal graph with only semantic similarity edges,sbert,0.3,True,False,False
+TF-IDF Baseline,Complete model with TF-IDF embeddings instead of SBERT,tfidf,0.1,True,True,True
+BOW Baseline,Complete model with Bag-of-Words embeddings,bow,0.1,True,True,True
+Only Name Relationships,Graph based solely on named entity relationships,sbert,0.3,False,True,True

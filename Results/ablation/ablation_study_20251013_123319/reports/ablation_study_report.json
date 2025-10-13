@@ -1,0 +1,81 @@
+{
+  "best_configuration": {
+    "config_name": "Only Sentence-Sentence",
+    "description": "Minimal graph with only semantic similarity edges",
+    "embedder": "sbert",
+    "sim_threshold": 0.3,
+    "use_sent_sent": true,
+    "use_sent_name": false,
+    "use_name_name": false,
+    "avg_rouge1": 0.3224645288459871,
+    "avg_rouge2": 0.1110001781379238,
+    "avg_rougeL": 0.1994904954807648,
+    "avg_rouge_l2": 0.40029145513413894,
+    "std_rouge1": 0.11689942131499932,
+    "std_rouge2": 0.0923668244412102,
+    "std_rougeL": 0.08952333383402102,
+    "std_rouge_l2": 0.16149041118952717,
+    "avg_time": 0.04184557199478149,
+    "std_time": 0.02067041604257947,
+    "n_articles": 100,
+    "success_rate": 1.0
+  },
+  "worst_configuration": {
+    "config_name": "No Sentence-Sentence Edges",
+    "description": "Ablated: Semantic similarity relationships between sentences",
+    "embedder": "sbert",
+    "sim_threshold": 0.3,
+    "use_sent_sent": false,
+    "use_sent_name": true,
+    "use_name_name": true,
+    "avg_rouge1": 0.23687159559379356,
+    "avg_rouge2": 0.061782949268701676,
+    "avg_rougeL": 0.14572015181533912,
+    "avg_rouge_l2": 0.2891268365409402,
+    "std_rouge1": 0.11333381685351207,
+    "std_rouge2": 0.07526885243135531,
+    "std_rougeL": 0.08263755868081053,
+    "std_rouge_l2": 0.15134147134888556,
+    "avg_time": 0.0579215145111084,
+    "std_time": 0.026304073175108987,
+    "n_articles": 100,
+    "success_rate": 1.0
+  },
+  "component_importance": {
+    "use_sent_sent": {
+      "performance_drop": 0.0957233845024848,
+      "significance": "high"
+    },
+    "use_sent_name": {
+      "performance_drop": -0.007720617045356981,
+      "significance": "low"
+    },
+    "use_name_name": {
+      "performance_drop": -0.007720617045356981,
+      "significance": "low"
+    }
+  },
+  "embedding_comparison": {
+    "bow": {
+      "avg_rouge_l2": 0.37298077493424936,
+      "avg_time": 0.032358906269073485,
+      "n_articles": 100
+    },
+    "sbert": {
+      "avg_rouge_l2": 0.3555159652243824,
+      "avg_time": 0.06239916324615479,
+      "n_articles": 600
+    },
+    "tfidf": {
+      "avg_rouge_l2": 0.35249059472334054,
+      "avg_time": 0.03249597787857056,
+      "n_articles": 100
+    }
+  },
+  "performance_summary": {
+    "rouge_l2_range": 0.11116461859319876,
+    "avg_processing_time": 0.054906232953071586,
+    "total_configurations": 8,
+    "success_rate_overall": 1.0
+  }
+}
