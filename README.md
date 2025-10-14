@@ -196,20 +196,12 @@ Lightweight graphs significantly **reduce runtime** with minimal loss in summari
 * The **graph-based architecture** remains robust, with ablated variants maintaining competitive ROUGE scores.
 
 ---
-
-## 📜 License
-
-This project is licensed under the MIT License — see the [LICENSE](LICENSE) file for details.
-
----
-
 ## 🙏 Acknowledgments
 
 * **Collaboration**: Amr Ashraf
 * **Supervision**: Dr. Doaa Shawky
 * **Institution**: Zewail City of Science and Technology
 * **Community**: Open-source contributors and tool developers
-
 ---
 
 ## 🧩 Citation
@@ -224,3 +216,8 @@ If you use this work in your research or project, please cite it as:
   institution = {Zewail City of Science and Technology},
   license = {MIT}
 }
+```
+---
+## 📜 License
+
+This project is licensed under the MIT License — see the [LICENSE](LICENSE) file for details.
