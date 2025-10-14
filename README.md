@@ -40,7 +40,6 @@ python experiments/ablation_study.py
 | `Results/`             | Generated metrics, plots, and logs                                     |
 | `diagrams/`            | UML and sequence diagrams for pipeline visualization                   |
 | `streamlit_app.py`     | Interactive summarization interface                                    |
-| `readme_builder.ipynb` | Notebook used to auto-generate README sections                         |
 | `LICENSE`              | MIT License                                                            |
 | `README.md`            | Project documentation                                                  |
 
